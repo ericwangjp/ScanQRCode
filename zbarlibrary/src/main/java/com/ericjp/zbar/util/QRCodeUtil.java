@@ -210,7 +210,6 @@ public class QRCodeUtil {
             }
             options.inSampleSize = sampleSize;
             options.inJustDecodeBounds = false;
-
             return BitmapFactory.decodeFile(picturePath, options);
         } catch (Exception e) {
             e.printStackTrace();

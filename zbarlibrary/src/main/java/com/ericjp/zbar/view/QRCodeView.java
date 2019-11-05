@@ -21,6 +21,7 @@ import com.ericjp.zbar.util.QRCodeUtil;
 import com.ericjp.zbar.util.BarcodeType;
 import com.ericjp.zbar.util.ProcessDataTask;
 import com.ericjp.zbar.util.ScanResult;
+
 /**
  * -----------------------------------------------------------------
  * Copyright (C) 2019, by sumpay, All rights reserved.
@@ -605,8 +606,8 @@ public abstract class QRCodeView extends RelativeLayout implements Camera.Previe
         }
 
         if (scanBoxAreaRect != null) {
-            result.y += scanBoxAreaRect.top;
-            result.x += scanBoxAreaRect.left;
+            result.y += scanBoxAreaRect.top * scaleX;
+            result.x += scanBoxAreaRect.left * scaleY;
         }
 
         return result;

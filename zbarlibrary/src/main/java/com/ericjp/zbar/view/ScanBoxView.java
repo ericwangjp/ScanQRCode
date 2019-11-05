@@ -20,6 +20,7 @@ import android.view.View;
 
 import com.ericjp.zbar.R;
 import com.ericjp.zbar.util.QRCodeUtil;
+
 /**
  * -----------------------------------------------------------------
  * Copyright (C) 2019, by sumpay, All rights reserved.
@@ -573,10 +574,10 @@ public class ScanBoxView extends View {
             float newHalfWidth = halfWidth * ratio;
             float newHalfHeight = halfHeight * ratio;
 
-            rect.left = (int) (centerX - newHalfWidth);
-            rect.right = (int) (centerX + newHalfWidth);
-            rect.top = (int) (centerY - newHalfHeight);
-            rect.bottom = (int) (centerY + newHalfHeight);
+            rect.left = (int) (centerX * ratio - newHalfWidth);
+            rect.right = (int) (centerX * ratio + newHalfWidth);
+            rect.top = (int) (centerY * ratio - newHalfHeight);
+            rect.bottom = (int) (centerY * ratio + newHalfHeight);
             return rect;
         } else {
             return null;

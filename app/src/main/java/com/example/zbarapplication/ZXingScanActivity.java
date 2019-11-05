@@ -235,9 +235,9 @@ public class ZXingScanActivity extends AppCompatActivity implements QRCodeView.D
 //                @Override
 //                protected void onPostExecute(String result) {
 //                    if (TextUtils.isEmpty(result)) {
-//                        Toast.makeText(TestScanActivity.this, "未发现二维码", Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(ZXingScanActivity.this, "未发现二维码", Toast.LENGTH_SHORT).show();
 //                    } else {
-//                        Toast.makeText(TestScanActivity.this, result, Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(ZXingScanActivity.this, result, Toast.LENGTH_SHORT).show();
 //                    }
 //                }
 //            }.execute();

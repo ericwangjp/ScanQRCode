@@ -157,9 +157,9 @@ public class ZBarView extends QRCodeView {
         try {
             int picWidth = bitmap.getWidth();
             int picHeight = bitmap.getHeight();
-            Image barcode = new Image(picWidth, picHeight, "RGB4");
             int[] pix = new int[picWidth * picHeight];
             bitmap.getPixels(pix, 0, picWidth, 0, 0, picWidth, picHeight);
+            Image barcode = new Image(picWidth, picHeight, "RGB4");
             barcode.setData(pix);
             String result = processData(barcode.convert("Y800"));
             return new ScanResult(result);
